@@ -45,3 +45,15 @@ for (let anchor of anchors) {
         });
     });
 }
+
+//BURGER MENU
+
+const burgerBtn = document.querySelector(".burger__menu");
+const sideMenu = document.querySelector(".header__nav");
+
+burgerBtn.addEventListener("click", () => {
+    const btnItems = document.querySelectorAll(".burger__menu-item").forEach((item) => {
+        item.classList.toggle("burger__menu-item--close");
+    });
+    sideMenu.classList.toggle("header__nav--active");
+});

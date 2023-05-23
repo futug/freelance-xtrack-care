@@ -1,5 +1,5 @@
 html {
-    overflow: hidden;
+    height: auto;
 }
 
 body {
@@ -69,13 +69,48 @@ body {
 
 @media (max-width: 768px) {
     .header__nav {
-        display: none;
+        display: flex;
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 100px 0px 99px 53px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 100px 0px 99px 53px rgba(34, 60, 80, 0.2);
+        box-shadow: 100px 0px 99px 53px rgba(34, 60, 80, 0.2);
+        transform: translateX(-200%);
+        transition: 0.9s ease-in-out;
+    }
+    .header__nav > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
     }
 
+    .header__nav--active {
+        transform: translateX(0);
+    }
+    .header__nav-item-link {
+        font-size: 24px;
+    }
     .header__phone {
-        color: #274a69;
+        color: #000;
         font-size: 16px;
-        display: block;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .header__phone::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: url("./img/phone-call.svg") no-repeat center/cover;
     }
 
     .burger__menu {
@@ -85,6 +120,7 @@ body {
         height: 28px;
         justify-content: space-between;
         cursor: pointer;
+        position: relative;
     }
 
     .burger__menu-item {
@@ -93,11 +129,32 @@ body {
         background-color: #274a69;
         border-radius: 2px;
     }
+    .burger__menu-item--close:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        transition: 0.4s ease-in-out;
+    }
+    .burger__menu-item--close:nth-child(2) {
+        height: 0;
+        transition: 0.4s ease-in-out;
+        display: none;
+    }
+    .burger__menu-item--close:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        transition: 0.4s ease-in-out;
+    }
 }
 
 @media (max-width: 424px) {
     .header__phone {
         display: none;
+    }
+
+    .header__nav > ul {
+        margin-left: -50px;
     }
 }
 
@@ -122,6 +179,18 @@ body {
     margin-top: 40px;
 }
 
+.header__subtitle--extra {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.header__subtitle--extra > span {
+    font-weight: 700;
+    /* color: rgb(235, 87, 61); */
+    background-color: #274a69;
+    color: #fff;
+    padding: 5px;
+}
 .header__main-phone {
     color: #000;
     font-size: 21px;
@@ -129,10 +198,13 @@ body {
     margin-top: 30px;
     display: block;
 }
-
+/* #df5b5b */
 .header__main-phone > span {
     font-weight: 700;
     /* color: rgb(235, 87, 61); */
+    background-color: #274a69;
+    color: #fff;
+    padding: 5px;
 }
 
 .header__form {
@@ -220,6 +292,10 @@ body {
     margin-top: 40px;
     width: 100%;
     height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .about__bot-contect-pic {
