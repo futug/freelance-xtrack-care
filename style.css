@@ -151,15 +151,20 @@
     border-bottom: 1px solid #274a69;
 }
 
-.header__form-submit {
+.main-button {
     padding: 5px 15px;
     outline: none;
     background-color: #274a69;
     border: none;
     border: 1px solid #274a69;
     color: #fff;
+    transition: 0.6s ease-in-out;
 }
 
+.main-button:hover {
+    background-color: transparent;
+    color: #274a69;
+}
 .section-title {
     text-align: center;
     font-size: 24px;
@@ -233,4 +238,56 @@
     .about__article-text {
         max-width: 580px;
     }
+}
+
+.products__slider {
+    margin-top: 100px;
+    position: relative;
+}
+.product__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__card-pic {
+    width: 248px;
+    height: 248px;
+}
+
+.product__card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.product__card-describe {
+    max-width: 275px;
+    margin-top: 30px;
+}
+
+.product__button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.prev-slide {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 50px;
+    z-index: 998;
+}
+
+.next-slide {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 50px;
+    z-index: 998;
 }

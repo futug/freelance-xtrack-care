@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="fonts.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Document</title>
     </head>
@@ -40,7 +41,7 @@
                     <form action="#" class="header__form">
                         <input class="header__form-name" type="text" placeholder="Type your name" />
                         <input class="header__form-phone" type="text" placeholder="Type your phone" />
-                        <button class="header__form-submit" type="submit">Get a call!</button>
+                        <button class="header__form-submit main-button" type="submit">Get a call!</button>
                     </form>
                 </div>
             </div>
@@ -93,10 +94,98 @@
                     </div>
                 </div>
             </section>
-            <section class="features"></section>
+            <section class="features">
+                <h2 class="section-title">Products</h2>
+                <div class="products__slider container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__tyreex-1.webp" alt="tyre pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX S GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage steer axle tyre that offers great stability and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__screen-1.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX S GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage steer axle tyre that offers great stability and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__tyreex-2.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX D GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage drive axle tyre that offers great traction and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__tyreex-3.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX T GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage drive axle tyre that offers great traction and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__screen-2.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX T GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage drive axle tyre that offers great traction and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__screen-4.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX T GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage drive axle tyre that offers great traction and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="product__card">
+                              <div class="product__card-top">
+                                <img class="product__card-pic" src="./img/x-flow__tyreex-4.webp" alt="full gas sort pic" />
+                              </div>
+                              <h3 class="product__card-title">KMAX T GEN-2</h3>
+                              <p class="product__card-describe">A hard-wearing, high-mileage drive axle tyre that offers great traction and is suitable for highway, regional and urban use, even in challenging weather situations.</p>
+                              <button class="product__button main-button">Pick this!</button>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                      <img class="prev-slide" src="./img/arrow-left.svg" alt="slide button" />
+                      <img class="next-slide" src="./img/arrow-right.svg" alt="slide button" />
+                    </div>
+                </div>
+            </section>
             <section class="brands"></section>
             <section class="contacts"></section>
             <footer class="footer"></footer>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="swiperInit.js"></script>
     </body>
 </html>
