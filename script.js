@@ -28,10 +28,6 @@ submitsBtn.forEach((sub) => {
     });
 });
 
-secondPopUp.addEventListener("click", () => {
-    secondPopUp.classList.remove("visible");
-});
-
 // POPUPS
 // SMOOTTH SCROLL
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -57,3 +53,86 @@ burgerBtn.addEventListener("click", () => {
     });
     sideMenu.classList.toggle("header__nav--active");
 });
+
+// Первая форма
+var form1 = document.querySelector(".header__form");
+var submitBtn1 = form1.querySelector(".header__form-submit");
+
+submitBtn1.addEventListener("click", function () {
+    var name = form1.querySelector(".header__form-name").value;
+    var phone = form1.querySelector(".header__form-phone").value;
+    sendEmail(name, phone);
+});
+
+// Вторая форма
+var form2 = document.querySelector(".contacts__form");
+var submitBtn2 = form2.querySelector(".contacts__form_submit");
+
+submitBtn2.addEventListener("click", function () {
+    var name = form2.querySelector(".header__form-name").value;
+    var phone = form2.querySelector(".header__form-phone").value;
+    var text = form2.querySelector(".contacts__form-text").value;
+    sendEmail(name, phone, text);
+});
+
+// Третья форма
+var form3 = document.querySelectorAll(".contacts__form")[1];
+var submitBtn3 = form3.querySelector(".contacts__form_submit");
+
+submitBtn3.addEventListener("click", function () {
+    var name = form3.querySelector(".header__form-name").value;
+    var phone = form3.querySelector(".header__form-phone").value;
+    var text = form3.querySelector(".contacts__form-text").value;
+    sendEmail(name, phone, text);
+});
+
+// function sendEmail(name, phone, text) {
+//     // Здесь можно использовать AJAX-запрос или другой метод отправки данных на сервер
+//     // Ниже приведен пример AJAX-запроса с использованием библиотеки jQuery
+
+//     // Если используется jQuery:
+//     $.ajax({
+//         url: "sender.php",
+//         type: "POST",
+//         data: {
+//             name: name,
+//             phone: phone,
+//             text: text,
+//         },
+//         success: function (response) {
+//             console.log("Email sent successfully");
+//             // Здесь можно добавить код для обработки успешной отправки письма
+//         },
+//         error: function (error) {
+//             console.error("Error sending email:", error);
+//             // Здесь можно добавить код для обработки ошибки при отправке письма
+//         },
+//     });
+// }
+
+function sendEmail(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение формы (перенаправление)
+
+    var form = event.target;
+    var name = form.elements["name"].value;
+    var phone = form.elements["phone"].value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "sender.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                console.log("Email sent successfully");
+                // Здесь можно добавить код для обработки успешной отправки письма
+            } else {
+                console.error("Error sending email");
+                // Здесь можно добавить код для обработки ошибки при отправке письма
+            }
+        }
+    };
+
+    var data = "name=" + encodeURIComponent(name) + "&phone=" + encodeURIComponent(phone);
+    xhr.send(data);
+}

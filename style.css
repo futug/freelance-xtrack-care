@@ -429,8 +429,14 @@ body {
 .contacts__form {
     margin-top: 40px;
 }
-.contacts__form-text {
+
+/* .contacts__form-row {
+    display: flex;
     width: 100%;
+    gap: 10px;
+} */
+.contacts__form-text {
+    width: 97%;
     padding: 5px;
     outline: none;
     background-color: transparent;
