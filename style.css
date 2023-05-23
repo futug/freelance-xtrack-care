@@ -33,6 +33,22 @@
     font-size: 16px;
 }
 
+.header__nav-item-link::after {
+    background-color: #274a69;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz--transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+
+.header__nav-item-link:hover:after,
+.header__nav-item-link:focus:after {
+    width: 100%;
+}
+
 .header__phone {
     display: none;
 }
