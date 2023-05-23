@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="fonts.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style.css" />
@@ -41,7 +44,7 @@
                     <form action="#" class="header__form">
                         <input class="header__form-name" type="text" placeholder="Type your name" />
                         <input class="header__form-phone" type="text" placeholder="Type your phone" />
-                        <button class="header__form-submit main-button" type="submit">Get a call!</button>
+                        <button class="header__form-submit main-button getcall" type="submit">Get a call!</button>
                     </form>
                 </div>
             </div>
@@ -181,11 +184,58 @@
                     </div>
                 </div>
             </section>
-            <section class="brands"></section>
-            <section class="contacts"></section>
-            <footer class="footer"></footer>
+            <section class="brands container">
+                <div class="brands__run-stroke">
+                    <img class="brands__pic" src="./img/brand-1.webp" alt="brand pic">
+                    <img class="brands__pic" src="./img/brand-2.webp" alt="brand pic">
+                    <img class="brands__pic" src="./img/brand-3.webp" alt="brand pic">
+                    <img class="brands__pic" src="./img/brand-4.webp" alt="brand pic">
+                    <img class="brands__pic" src="./img/brand-5.webp" alt="brand pic">
+                    <img class="brands__pic" src="./img/brand-6.webp" alt="brand pic">
+                </div>
+            </section>
+            <section class="contacts container">
+                <h2 class="section-title">Contact us!</h2>
+                <p class="contacts__info">If you have any questions, please call us anytime: <span><a href="tel:4698238282">469-823-8282</a></span></p>
+                <p>or:</p>
+                <p class="contacts__info">Send an e-mail: <span><a href="mailto:example@mail.com">example@mail.com</a></span></p>
+                <p>or:</p>
+                <p class="contacts__info">Fill the form, and we will call you back, as soon as possible:</p>
+                <form action="" class="contacts__form">
+                    <div class="contacts__form-row">
+                        <input class="header__form-name" type="text" placeholder="Type your name" />
+                        <input class="header__form-phone" type="text" placeholder="Type your phone" />
+                        
+                    </div>
+                    <textarea class="contacts__form-text" name="" id="" cols="30" rows="10" placeholder="Please explain your issue"></textarea>
+                    <button type="submit" class="contacts__form_submit main-button getcall">Get a call!</button>
+                </form>
+            </section>
+            <div class="form__popup">
+                <h2 class="section-title">Only one step to get a call:</h2>
+                <form action="" class="contacts__form">
+                    <div class="contacts__form-row">
+                        <input class="header__form-name" type="text" placeholder="Type your name" />
+                        <input class="header__form-phone" type="text" placeholder="Type your phone" />
+                        
+                    </div>
+                    <textarea class="contacts__form-text" name="" id="" cols="30" rows="10" placeholder="Please explain your issue"></textarea>
+                    <button type="submit" class="contacts__form_submit main-button getcall">Get a call!</button>
+                </form>
+            </div>
+            <div class="secondary__popup">
+                <p>Thank you! We will call you back, as soon as possible!</p>
+                <p><a href="#">[close]</a></p>
+            </div>
+         
         </main>
+        <footer class="footer container">
+            <div class="footer__content">
+                <p>&copy; <span>xflow truck care.</span> All rights reserved.</p>
+              </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="swiperInit.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
