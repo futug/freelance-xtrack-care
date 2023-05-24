@@ -86,30 +86,6 @@ submitBtn3.addEventListener("click", function () {
     sendEmail(name, phone, text);
 });
 
-// function sendEmail(name, phone, text) {
-//     // Здесь можно использовать AJAX-запрос или другой метод отправки данных на сервер
-//     // Ниже приведен пример AJAX-запроса с использованием библиотеки jQuery
-
-//     // Если используется jQuery:
-//     $.ajax({
-//         url: "sender.php",
-//         type: "POST",
-//         data: {
-//             name: name,
-//             phone: phone,
-//             text: text,
-//         },
-//         success: function (response) {
-//             console.log("Email sent successfully");
-//             // Здесь можно добавить код для обработки успешной отправки письма
-//         },
-//         error: function (error) {
-//             console.error("Error sending email:", error);
-//             // Здесь можно добавить код для обработки ошибки при отправке письма
-//         },
-//     });
-// }
-
 function sendEmail(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение формы (перенаправление)
 
